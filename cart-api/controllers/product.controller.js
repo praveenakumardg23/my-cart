@@ -10,9 +10,9 @@ exports.getProducts = async function(req, res, next){
 
     try{
     
-        var todos = await ProductService.getProducts()
+        var products = await ProductService.getProducts()
         
-        return res.status(200).json({status: 200, data: todos, message: "Succesfully Products Recieved"});
+        return res.status(200).json({'status': 200, products, 'message': 'Succesfully Products Recieved'});
         
     }catch(e){
         

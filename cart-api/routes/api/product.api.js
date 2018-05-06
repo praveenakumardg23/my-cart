@@ -4,8 +4,8 @@ var router = express.Router();
 
 // Map each API to the Controller FUnctions
 
-router.get('/', controller.getTodos);
+router.get('/', controller.getProducts);
 
-router.put('/', controller.updateTodo);
+router.put('/', controller.updateProduct);
 
 module.exports = router;

@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var bluebird = require('bluebird');
 
 var indexRouter = require('./routes/index');
 
