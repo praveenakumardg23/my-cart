@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-lg-4" *ngFor="let product of products">
+        <div class="card">
+            <img [src]="product.imagePath" alt="" height="250">
+            <div class="container">
+            <h4><b>{{product.name}}</b></h4> 
+            <p>{{product.price}}$</p>
+            <button [disabled]="product.isInCart" (click)="addToCart(product)">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
