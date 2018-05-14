@@ -12,7 +12,7 @@ export class ProductsComponent {
   
     @Input() products: Product[];
 
-    @Output() productChange = new EventEmitter<Product>();
+    @Output() productChange = new EventEmitter();
 
     constructor(private service: ProductService) {
 
@@ -22,7 +22,7 @@ export class ProductsComponent {
         product.isInCart = true;
         this.service.updateProduct(product).subscribe(
             (response) => {
-                this.productChange.emit(product);
+                this.productChange.emit();
             },
             (err) => {
                 alert('Product not removed from cart');;

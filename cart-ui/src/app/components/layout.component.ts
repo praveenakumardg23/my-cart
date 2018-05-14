@@ -20,16 +20,11 @@ export class LayoutComponent {
     getProducts() {
         this.service.getProducts().subscribe(
             (response) => {
-                this.products = response.json();
+                this.products = response.json().products;
             },
             (error) => {
                 alert('Get Products Failed');
             }
         );
-    }
-
-    updateProduct(product: Product) {
-        const index = this.products.findIndex((curProduct) => { return curProduct.id === product.id;});
-        this.products[index] = product;
     }
 }

@@ -1,7 +1,7 @@
 export interface Product {
     id: string;
     name: string;
-    imagePath: string;
+    image: string;
     price: number;
     isInCart: boolean;
 }

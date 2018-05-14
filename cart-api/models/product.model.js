@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var ProductSchema = new mongoose.Schema({
     name: String,
-    imagePath: String,
+    image: String,
     price: Number,
     isInCart: Boolean
 }, {collection: 'Product'})

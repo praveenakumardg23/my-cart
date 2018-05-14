@@ -18,7 +18,7 @@ exports.getProducts = async function(){
 }
 
 exports.updateProduct = async function(product){
-    var id = product.id
+    var id = product._id
 
     try{
         var product = await Product.findOneAndUpdate({ _id: id }, product, { new:true });

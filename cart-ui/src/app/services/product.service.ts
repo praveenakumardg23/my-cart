@@ -12,11 +12,17 @@ export class ProductService {
     }
 
     getProducts(): any{
-        return this._http.get(environment.API_ROOT_PATH + '/api/products');
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        var options = new RequestOptions({headers: headers});
+        return this._http.get(environment.API_ROOT_PATH + '/api/products', options);
     }
 
     updateProduct(product: Product): any{
-        return this._http.put(environment.API_ROOT_PATH + '/api/products', product);
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        var options = new RequestOptions({headers: headers});
+        return this._http.put(environment.API_ROOT_PATH + '/api/products', product, options);
     }
 
 }
